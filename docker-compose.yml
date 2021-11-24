@@ -1,0 +1,15 @@
+version: "3.6"
+services:
+        basededatos:
+                image: memcached
+
+        aplicacion:
+                build:
+                        context: python/
+                        dockerfile: Dockerfile
+                links:
+                 - basededatos
+
+                volumes: 
+                 - ./python/main.py
+

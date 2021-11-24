@@ -1,0 +1,22 @@
+Attaching to dockeras_basededatos_1, dockeras_aplicacion_1
+[36maplicacion_1   |[0m Qué quieres hacer?
+[36maplicacion_1   |[0m 1. Meter un nuevo Pokémon en la base de datos
+[36maplicacion_1   |[0m 2. Buscar el tipo de un Pokémon en concreto
+[36maplicacion_1   |[0m Mete en número por favor... 
+[36maplicacion_1   |[0m Mete el nombre de un Pokémon 
+[36maplicacion_1   |[0m Traceback (most recent call last):
+[36maplicacion_1   |[0m   File "/usr/lib/python3.8/runpy.py", line 185, in _run_module_as_main
+[36maplicacion_1   |[0m     mod_name, mod_spec, code = _get_module_details(mod_name, _Error)
+[36maplicacion_1   |[0m   File "/usr/lib/python3.8/runpy.py", line 111, in _get_module_details
+[36maplicacion_1   |[0m     __import__(pkg_name)
+[36maplicacion_1   |[0m   File "/app/main.py", line 40, in <module>
+[36maplicacion_1   |[0m     tipo = client.get(pokeName)
+[36maplicacion_1   |[0m   File "/usr/local/lib/python3.8/dist-packages/pymemcache/client/base.py", line 619, in get
+[36maplicacion_1   |[0m     return self._fetch_cmd(b'get', [key], False).get(key, default)
+[36maplicacion_1   |[0m   File "/usr/local/lib/python3.8/dist-packages/pymemcache/client/base.py", line 1018, in _fetch_cmd
+[36maplicacion_1   |[0m     self._connect()
+[36maplicacion_1   |[0m   File "/usr/local/lib/python3.8/dist-packages/pymemcache/client/base.py", line 420, in _connect
+[36maplicacion_1   |[0m     sock.connect(sockaddr)
+[36maplicacion_1   |[0m ConnectionRefusedError: [Errno 111] Connection refused
+[36mdockeras_aplicacion_1 exited with code 1
+[0mGracefully stopping... (press Ctrl+C again to force)
