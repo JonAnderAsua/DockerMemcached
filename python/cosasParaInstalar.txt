@@ -1,0 +1,5 @@
+base
+requests
+pymemcache
+pymemcache.client
+pylibmc
