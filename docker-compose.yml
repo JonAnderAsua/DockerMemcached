@@ -2,7 +2,7 @@ version: "3.6"
 services:
         basededatos:
                 image: memcached
-
+                command: memcached
         aplicacion:
                 build:
                         context: python/
@@ -11,5 +11,6 @@ services:
                  - basededatos
 
                 volumes: 
-                 - ./python/main.py
-
+                 - ./python/:/app
+volumes:
+        volPython:
