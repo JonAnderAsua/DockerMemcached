@@ -8,8 +8,8 @@ RUN apt -qq update
 RUN apt install python3-pip -y
 
 #Copiar ficheros
-COPY main.py app/main.py
-COPY cosasParaInstalar.txt app/cosasParaInstalar.txt 
+COPY main.py /app/main.py
+COPY cosasParaInstalar.txt /app/cosasParaInstalar.txt 
 
 #Elegir workdir
 WORKDIR /app
@@ -21,4 +21,6 @@ RUN pip install --upgrade pip
 RUN python3 -m pip install --default-timeout=100 -r cosasParaInstalar.txt
 
 #Runear la app
-CMD ["/usr/bin/python3", "-m","main.py"]
+CMD ["/usr/bin/python3", "main.py"]
+#CMD ["/bin/bash"]
+#CMD ["python3 main.py"]

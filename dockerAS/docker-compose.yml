@@ -9,8 +9,8 @@ services:
                         dockerfile: Dockerfile
                 links:
                  - basededatos
-
                 volumes: 
-                 - ./python/:/app
+                 - ./python:/app:rw
+
 volumes:
-        volPython:
+        python:

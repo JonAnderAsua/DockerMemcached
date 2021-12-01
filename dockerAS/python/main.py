@@ -16,7 +16,7 @@ def getPokemon(pokeName):
 #  Mamcachearekin lotu
 client = Client(('basededatos', 11211))
 
-while True:
+def hacer():
     num = ""
     print("Qué quieres hacer?")
     print("1. Meter un nuevo Pokémon en la base de datos")
@@ -46,3 +46,6 @@ while True:
         print("El tipo del Pokemon es: ")
         print(tipo)
 
+if __name__=="__main__":
+    while True:
+        hacer()
