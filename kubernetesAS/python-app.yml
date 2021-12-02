@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-pod
+  labels:
+    component: db
+spec:
+  containers:
+    - name: app-python
+      image: jasuamiranda/appython
+      volumeMounts:
+        - mountPath: app
+          name: volpython
+  volumes:
+    - name: volPython
+      persistentVolumeClaim:
+        claimName: volpython

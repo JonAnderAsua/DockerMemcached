@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bdpot
+  labels:
+    component: db
+spec:
+  containers:
+    - name: basededatos
+      image: memcached
+      ports:
+        - containerPort: 11211
